@@ -9,13 +9,13 @@
     
     <meta name="author" content="shaoyong hua">
     
-    <meta name="description" content="##搭建githup+hexo@(我的第一个笔记本)[hexo|githup|blog]
+    <meta name="description" content="搭建githup+hexo@(我的第一个笔记本)[hexo|githup|blog]
 
 安装Git
 安装Node.js
 安装hexo 使用命令 npm install -g hexo
 创建hexo文件夹（例如 D:\hexo) 使用命令 hexo init npm install
-查看本地部署 ">
+查看本地部署 he">
     
     
     
@@ -79,7 +79,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-04-22T04:52:45.000Z" itemprop="datePublished">2016-04-22</time>
-    更新日期:<time datetime="2016-04-22T04:55:01.339Z" itemprop="dateModified">2016-04-22</time>
+    更新日期:<time datetime="2016-04-22T05:03:56.591Z" itemprop="dateModified">2016-04-22</time>
     
   </p>
 </header>
@@ -88,10 +88,10 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建githup-hexo"><span class="toc-number">1.</span> <span class="toc-text">搭建githup+hexo</span></a></li></ol>
 		</div>
 		
-		<p>##搭建githup+hexo<br>@(我的第一个笔记本)[hexo|githup|blog]</p>
+		<h2 id="搭建githup-hexo"><a href="#搭建githup-hexo" class="headerlink" title="搭建githup+hexo"></a>搭建githup+hexo</h2><p>@(我的第一个笔记本)[hexo|githup|blog]</p>
 <ol>
 <li>安装Git</li>
 <li>安装Node.js</li>
@@ -99,17 +99,30 @@
 <li>创建hexo文件夹（例如 D:\hexo)<br> 使用命令 hexo init<br> npm install</li>
 <li>查看本地部署<br> hexo generate<br> hexo server</li>
 <li>在githup上创建repository:shaoyonghua.githup.io</li>
-<li><p>编辑_cofig.yml(在hexo目录下)</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">     <span class="comment">#Deployment</span></span><br><span class="line">      <span class="comment">##Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:ShaoyongHua/shaoyonghua.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装 npm install hexo-deployer-git –save</p>
-</li>
-<li><p>输入下面的命令</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate <span class="comment">#生成</span></span><br><span class="line">hexo deploy <span class="comment">#将.deploy目录部署到GitHup</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>常用命令</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"postName"</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo new page <span class="string">"pageName"</span> <span class="comment">#新建页面</span></span><br><span class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></span><br><span class="line">hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></span><br><span class="line">hexo help  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment">#查看Hexo的版本</span></span><br><span class="line">hexo n == hexo new</span><br><span class="line">hexo g == hexo generate</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo d == hexo deploy</span><br><span class="line">hexo deploy -g  <span class="comment">#生成加部署</span></span><br><span class="line">hexo server -g  <span class="comment">#生成加预览</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>编辑_cofig.yml(在hexo目录下)<br> `<pre><code>#Deployment
+##Docs: https://hexo.io/docs/deployment.html
+deploy:
+    type: git
+    repository: git@github.com:ShaoyongHua/shaoyonghua.github.io.git
+    branch: master
+</code></pre> `</li>
+<li>安装 npm install hexo-deployer-git –save</li>
+<li>输入下面的命令<br> `<pre><code>hexo generate #生成
+hexo deploy #将.deploy目录部署到GitHup
+</code></pre> `</li>
+<li>常用命令<br><code>hexo new &quot;postName&quot; #新建文章
+hexo new page &quot;pageName&quot; #新建页面
+hexo generate #生成静态页面至public目录
+hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）
+hexo deploy #将.deploy目录部署到GitHub
+hexo help  # 查看帮助
+hexo version  #查看Hexo的版本
+hexo n == hexo new
+hexo g == hexo generate
+hexo s == hexo server
+hexo d == hexo deploy
+hexo deploy -g  #生成加部署
+hexo server -g  #生成加预览</code></li>
 </ol>
 <p><a href="http://zipperary.com/2013/05/28/hexo-guide-2/" target="_blank" rel="external">搭建hexo博客</a><br><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">Hexo搭建Github静态博客</a><br><a href="http://www.imooc.com/article/1908" target="_blank" rel="external">最新hexo3和Github搭建个人博客遇到问题和解决方法汇总！</a><br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a></p>
   
@@ -157,7 +170,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建githup-hexo"><span class="toc-number">1.</span> <span class="toc-text">搭建githup+hexo</span></a></li></ol>
   </div>
 
 <div id="asidepart">
